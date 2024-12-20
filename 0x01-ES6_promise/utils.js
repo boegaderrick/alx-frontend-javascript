@@ -1,5 +1,4 @@
 export function uploadPhoto() {
-  // return Promise.reject(new Error('Faied'));
   return Promise.resolve({
     status: 200,
     body: 'photo-profile-1',
