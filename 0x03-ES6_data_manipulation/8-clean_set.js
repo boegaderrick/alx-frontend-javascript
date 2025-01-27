@@ -8,8 +8,8 @@ export default function cleanSet(set, startString) {
    * });
    * return str.slice(1);
    */
-  return [...set]
-    .filter((element) => startString.length > 0 && element.startsWith(startString))
+  return set && startString ? [...set]
+    .filter((element) => element && startString.length > 0 && element.startsWith(startString))
     .map((element) => element.slice(startString.length))
-    .join('-');
+    .join('-') : '';
 }
